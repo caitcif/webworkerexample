@@ -53,7 +53,7 @@ export default defineComponent({
   },
   setup(props) {
     function runWebWorker() {
-      const worker = new Worker(new URL('foeworker.ts', import.meta.url));
+      const worker = new Worker(new URL('./foeworker.ts', import.meta.url));
       worker.postMessage({
         message: 'Hello Worker',
       });
